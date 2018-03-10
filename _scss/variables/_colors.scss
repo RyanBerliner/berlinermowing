@@ -2,6 +2,7 @@ $color_black : #333333;
 $color_white : #ffffff;
 
 $color_green : #00aa55;
+$color_grey  : darken($color_white, 10);
 
 $color_headers : $color_black;
 $color_body    : lighten($color_black, 20);

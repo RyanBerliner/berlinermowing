@@ -6,8 +6,10 @@ body {
 	-moz-osx-font-smoothing: grayscale;
 	font-family: $font_body;
 	color: $color_body;
+	line-height: 1.7;
 }
 h1,h2,h3,h4,h5,h6 {
+	font-weight: 700;
 	color: $color_headers;
 }
 span.logo {
@@ -15,4 +17,22 @@ span.logo {
 	text-transform: uppercase;
 	color: $color_green;
 	font-weight: 700;
+}
+div.full-width-block {
+	@include image_block;
+}
+div.full-width-blank-block {
+	@include block;
+}
+*.berlinermowing-hide {
+	position: absolute;
+	height: 1px;
+	width: 1px;
+	overflow: hidden;
+	opacity: 0;
+}
+*.berlinermowing-content {
+	max-width: $size_max_content;
+	margin-left: auto;
+	margin-right: auto;
 }

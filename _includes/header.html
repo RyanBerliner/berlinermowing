@@ -1,25 +1,8 @@
 <header role="banner" id="main-header">
-	<nav class="navbar navbar-expand-lg navbar-dark">
-		<a class="navbar-brand" href="/"><span class="logo">Berliner Mowing</span></a>
-		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-			<span class="navbar-toggler-icon"></span>
-		</button>
-		<div class="collapse navbar-collapse" id="navbarNav">
-			<ul class="navbar-nav">
-					{% assign pages_list = site.pages | sort: 'order' %}
-					{% assign group = 'navigation' %}
-					{% for node in pages_list %}
-						{% if group == null or group == node.group %}
-							{% if page.url == node.url %}
-								<a class="nav-item nav-link active" href="{{node.url}}">{{node.title}} <span class="sr-only">(current)</span></a>
-							{% else %}
-								<a class="nav-item nav-link" href="{{node.url}}">{{node.title}}</a>
-							{% endif %}
-						{% endif %}
-					{% endfor %}
-					{% assign pages_list = nil %}
-					{% assign group = nil %}
-				</ul>
+	<nav class="navbar navbar-dark ">
+		<div class="container justify-content-between">
+			<a class="navbar-brand" href="/"><span class="logo">Berliner Mowing</span></a>
+			<a class="btn btn-secondary my-2 my-sm-0" href="/contact/">Contact</a>
 		</div>
 	</nav>
 </header>

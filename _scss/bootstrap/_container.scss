@@ -1,3 +1,9 @@
 .container {
 	max-width: $size_container_max;
 }
+@media(max-width: $size_container_max + 29px) {
+	.container-fluid {
+		padding-left: 0;
+		padding-right: 0;
+	}
+}
