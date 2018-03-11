@@ -1,7 +1,11 @@
+@mixin font_smoothing {
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
 @mixin block {
 	background-color: $color_grey;
-	padding-top: 40px;
-	padding-bottom: 40px;
+	padding-top: 60px;
+	padding-bottom: 60px;
 	margin-top: 15px;
 	margin-bottom: 15px;
 	ul li {
@@ -10,6 +14,7 @@
 	}
 	p.lead:first-child {
 		color: $color_headers;
+		font-weight: 700;
 	}
 	*:last-child {
 		margin-bottom: 0;
@@ -22,36 +27,64 @@
 	background-size: cover;
 	background-position: center;
 	position: relative;
-	&:before {
-		content: attr(data-section-title);
-		color: $color_white;
-		font-weight: 700;
-		padding-left: 30px;
-		padding-right: 30px;
-		position: absolute;
-		left: 50%;
-		top: 50%;
-		transform: translate(-50%, -50%);
-		z-index: 1;
-		font-size: 3.5rem;
-		text-align: center;
-		line-height: 1.2;
-		@media(max-width: 1000px) {
-			font-size: 2.5rem;
+	&.square {
+		height: 0;
+		padding-bottom: 100%;
+	}
+	&:not(.just-image) {
+		&:before {
+			content: attr(data-section-title);
+			color: $color_white;
+			font-weight: 700;
+			padding-left: 30px;
+			padding-right: 30px;
+			position: absolute;
+			left: 50%;
+			top: 50%;
+			transform: translate(-50%, -50%);
+			z-index: 1;
+			font-size: 3.5rem;
+			text-align: center;
+			line-height: 1.2;
+			@include font_smoothing;
+			@media(max-width: 1000px) {
+				font-size: 2.5rem;
+			}
+		}
+		&:after {
+			content: '';
+			position: absolute;
+			display: block;
+			left: 0;
+			top: 0;
+			width: 100%;
+			height: 100%;
+			background-color: darken($color_green, 20);
+			opacity: .9;
+		}
+		&:not(.square) {
+			@media(max-width: $size_container_max + 29px) {
+				height: 50vh;
+			}
+		}
+		&.black {
+			&:before {
+				color: $color_green;
+			}
+			&:after {
+				opacity: 1;
+				background-color: $color_black;
+			}
 		}
 	}
-	&:after {
-		content: '';
-		position: absolute;
-		display: block;
-		left: 0;
-		top: 0;
-		width: 100%;
-		height: 100%;
-		background-color: darken($color_green, 20);
-		opacity: .9;
-	}
-	@media(max-width: $size_container_max + 29px) {
-		height: 50vh;
+	&.small {
+		&:not(.just-image) {
+			&:before {
+				font-size: 2.5rem;
+				@media(max-width: 1000px) {
+					font-size: 2.2rem;
+				}
+			}
+		}
 	}
 }

@@ -1,6 +1,14 @@
 .container {
 	max-width: $size_container_max;
 }
+.row.berlinermowing-row-padding {
+	margin-right: -8px;
+	margin-left: -8px;
+	& > div[class^="col"] {
+		padding-left: 8px;
+		padding-right: 8px;
+	}
+}
 @media(max-width: $size_container_max + 29px) {
 	.container-fluid {
 		padding-left: 0;

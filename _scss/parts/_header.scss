@@ -3,8 +3,13 @@ header#main-header {
 		background-color: $color_black;
 		padding-left: 0;
 		padding-right: 0;
+		transition: .5s background-color;
 		.navbar-brand {
 			font-size: 1.5rem;
+		}
+		&.white {
+			background-color: $color_white;
+			box-shadow: 0 2px 3px transparentize(#000000, .92);
 		}
 	}
 }

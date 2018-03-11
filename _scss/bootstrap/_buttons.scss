@@ -1,0 +1,21 @@
+.btn {
+	border-radius: 0;
+	font-weight: 700;
+	border: none;
+	&.btn-secondary {
+		background-color: $color_white;
+		color: $color_body;
+		&:hover, &:active, &:focus {
+			background-color: darken($color_white, 10) !important;
+			color: $color_body !important;
+		}
+	}
+	&.btn-primary {
+		background-color: $color_green;
+		color: $color_white;
+		&:hover, &:active, &:focus {
+			background-color: darken($color_green, 10) !important;
+			color: $color_white !important;
+		}
+	}
+}
