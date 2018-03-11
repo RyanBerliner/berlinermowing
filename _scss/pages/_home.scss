@@ -5,3 +5,13 @@ div#contact {
 		}
 	}
 }
+div#testimonial {
+	height: calc(100% - 15px);
+	display: flex;
+	align-items: center;
+	div.container {
+		padding-left: 40px;
+		padding-right: 40px;
+		text-align: center;
+	}
+}
