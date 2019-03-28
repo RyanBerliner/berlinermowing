@@ -4,12 +4,24 @@ header#main-header {
 		padding-left: 0;
 		padding-right: 0;
 		transition: .5s background-color;
+    top: 28px;
 		.navbar-brand {
 			font-size: 1.5rem;
 		}
-		&.white {
-			background-color: $color_white;
-			box-shadow: 0 2px 3px transparentize(#000000, .92);
-		}
 	}
+  .update-notice {
+    background-color: $color_white;
+    transition: .5s all;
+  }
+  &.white {
+    nav.navbar {
+      background-color: $color_white;
+			box-shadow: 0 2px 3px transparentize(#000000, .92);
+    }
+    .update-notice {
+      background-color: $color_black;
+      color: $color_white;
+      transition: .5s background-color;
+    }
+  }
 }
