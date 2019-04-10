@@ -14,7 +14,7 @@
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
 title: Berliner Mowing
-email: ryan@mowmolawn.com
+email: ryan@berlinermowing.com
 description: >- # this means to ignore newlines until "baseurl:"
   Berliner Mowing can help anyone with their lawn mowing needs. If you need a
   full mow with a zero turn, trimmer, blower, just a quick cleanup, or perhaps

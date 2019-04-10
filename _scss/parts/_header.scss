@@ -1,27 +1,27 @@
 header#main-header {
+  display: flex;
+  flex-direction: column-reverse;
 	nav.navbar {
 		background-color: $color_black;
 		padding-left: 0;
 		padding-right: 0;
 		transition: .5s background-color;
-    top: 28px;
 		.navbar-brand {
 			font-size: 1.5rem;
 		}
 	}
   .update-notice {
     background-color: $color_white;
+    padding: 40px 0;
     transition: .5s all;
-  }
-  &.white {
-    nav.navbar {
-      background-color: $color_white;
-			box-shadow: 0 2px 3px transparentize(#000000, .92);
+    .lead {
+      line-height: 1.4;
+      a {
+        white-space: nowrap;
+      }
     }
-    .update-notice {
-      background-color: $color_black;
-      color: $color_white;
-      transition: .5s background-color;
+    .logo {
+      line-height: initial;
     }
   }
 }
